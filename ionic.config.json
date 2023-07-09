@@ -1,0 +1,7 @@
+{
+  "name": "JackDental",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
