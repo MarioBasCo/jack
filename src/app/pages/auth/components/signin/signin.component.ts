@@ -36,6 +36,8 @@ export class SigninComponent  implements OnInit {
         this._svcMsg.showToast('Inicio de sesión con exito');
         this._svcUtil.set('user_jack', resp.info);
         this.router.navigateByUrl('/home', { replaceUrl: true });
+      } else {
+        this._svcMsg.showToast('No se pudo iniciar sesion, compruebe sus credenciales');
       }
     });
   }

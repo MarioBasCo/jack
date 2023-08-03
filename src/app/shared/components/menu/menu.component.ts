@@ -18,7 +18,7 @@ export class MenuComponent  implements OnInit {
 
   constructor(private alertCtrl: AlertController) { 
     const user = this._svcUtil.get('user_jack');
-    this.rol_id = user.rol_id;
+    this.rol_id = user?.rol_id ?? 0;
   }
 
   ngOnInit() {}
