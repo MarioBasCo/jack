@@ -1,0 +1,12 @@
+<div [formGroup]="loginForm">
+  <div class="ion-margin-vertical">
+    <ion-input label="Usuario" label-placement="floating" formControlName="usuario" fill="outline" placeholder="Enter text"></ion-input>
+  </div>
+  
+  <div class="ion-margin-vertical">
+    <ion-input type="password" label="Contraseña" label-placement="floating" formControlName="clave" fill="outline" placeholder="Enter text"></ion-input>
+  </div>
+  
+  <ion-button type="button" color="secundario" shape="round" [disabled]="loginForm.invalid" (click)="ingresar()">Ingresar</ion-button>
+  
+</div>

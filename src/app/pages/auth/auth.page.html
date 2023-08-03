@@ -1,0 +1,48 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="transparent">
+    <div class="top-circle"></div>
+    <ion-buttons slot="end" style="margin-right: 4px;">
+      <ion-avatar>
+        <img style="width: 3em; height: 3em; margin-top: 8px" src="assets/icon/jackd-logo.png" />
+      </ion-avatar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <div class="wrapper">
+    <div class="image" *ngIf="segment == 'login'">
+      <img src="assets/images/signin.svg">
+    </div>
+
+    <div class="image" *ngIf="segment == 'register'">
+      <img src="assets/images/signup.svg">
+    </div>
+
+    <ion-segment value="login">
+      <ion-segment-button value="login" (click)="segment = 'login'">
+        <ion-label>Ingreso</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="register" (click)="segment = 'register'">
+        <ion-label>Registro</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <div [ngSwitch]="segment" class="wrapper-content">
+      <div *ngSwitchCase="'login'">
+        <app-signin></app-signin>
+      </div>
+
+      <div *ngSwitchCase="'register'">
+        <app-signup></app-signup>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar color="transparent">
+    <div class="bottom-ellipse"></div>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,26 @@
+<header-back [titulo]="'Mi Perfil'"></header-back>
+
+<ion-content [fullscreen]="true">
+    <div class="container">
+        <div class="profile-container">
+            <div class="img-container">
+                <img src="assets/icon/usuario.png">
+            </div>
+            <p class="info full-name">
+                {{objCliente.nombres}} {{objCliente.apellidos}}
+            </p>
+            <p class="info">
+                <ion-icon name="mail"></ion-icon>
+                {{objCliente.usuario}}
+            </p>
+            <p class="info">
+                <ion-icon name="location"></ion-icon>
+                {{objCliente.direccion}}
+            </p>
+            <p class="info">
+                <ion-icon name="call"></ion-icon>
+                {{objCliente.celular}}
+            </p>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,21 @@
+ion-thumbnail {
+    --size: 55px !important;
+}
+
+ion-header {
+    background-color: var(--ion-color-terciario);
+    color: var(--ion-color-principal);
+
+    small {
+        color: var(--ion-color-secundario);
+    }
+}
+
+ion-content {
+    --background: var(--ion-color-terciario);
+}
+
+
+ion-footer {
+    background-color: var(--ion-color-terciario);
+}

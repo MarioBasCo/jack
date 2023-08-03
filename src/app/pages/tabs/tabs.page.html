@@ -1,0 +1,25 @@
+<app-menu></app-menu>
+
+<ion-tabs>
+  <ion-fab vertical="bottom" horizontal="center" translucent="true">
+    <ion-fab-button color="secundario" routerLink="/dating">
+      <ion-icon size="large" name="calendar-clear-outline" color="cuaternario"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-tab-bar slot="bottom" class="ion-no-border">
+
+    <ion-tab-button tab="home" class="comments">
+      <ion-icon src="assets/icon/home.svg" style="font-size: 2.33em;" color="secundario"></ion-icon>
+    </ion-tab-button>
+
+    <svg height="50" viewBox="0 0 100 50" width="100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 0v50H0V0c.543 27.153 22.72 49 50 49S99.457 27.153 99.99 0h.01z" fill="red" fill-rule="evenodd">
+      </path>
+    </svg>
+
+    <ion-tab-button id="main-content" class="notifs" (click)="openMenu()">
+      <ion-icon src="assets/icon/menu-right.svg" style="font-size: 2.33em;" color="secundario"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

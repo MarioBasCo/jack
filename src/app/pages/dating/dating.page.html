@@ -1,0 +1,10 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="secundario">
+    <ion-title class="ion-text-start">Reservaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <app-take-reservations *ngIf="rol_id == 1"></app-take-reservations>
+  <app-form-reserve *ngIf="rol_id == 2"></app-form-reserve>
+</ion-content>

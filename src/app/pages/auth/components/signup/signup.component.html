@@ -1,0 +1,27 @@
+<div [formGroup]="form">
+  <div class="ion-margin-vertical">
+    <ion-input label="Nombres" label-placement="floating" formControlName="nombres" fill="outline" placeholder="Enter text"></ion-input>
+  </div>
+
+  <div class="ion-margin-vertical">
+    <ion-input label="Apellidos" label-placement="floating" formControlName="apellidos" fill="outline" placeholder="Enter text"></ion-input>
+  </div>
+
+  <div class="ion-margin-vertical">
+    <ion-input label="Celular" label-placement="floating" formControlName="celular" fill="outline" placeholder="Enter text"></ion-input>
+  </div>
+
+  <div class="ion-margin-vertical">
+    <ion-input label="Direccion" label-placement="floating" formControlName="direccion" fill="outline" placeholder="Enter text"></ion-input>
+  </div>
+
+  <div class="ion-margin-vertical">
+    <ion-input label="Usuario" label-placement="floating" formControlName="usuario" fill="outline" placeholder="Enter text"></ion-input>
+  </div>
+
+  <div class="ion-margin-vertical">
+    <ion-input label="Contraseña" formControlName="clave" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+  </div>
+
+  <ion-button type="button" color="secundario" shape="round" [disabled]="form.invalid" (click)="registrarse()">Ingresar</ion-button>
+</div>

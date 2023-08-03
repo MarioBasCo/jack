@@ -1,0 +1,18 @@
+<section>
+  <ion-list *ngIf="list.length > 0">
+    <ion-item-sliding *ngFor="let item of list">
+      <ion-item lines="none">
+        <ion-text>
+          <h5><b>{{item.nombres}} {{item.apellidos}}</b></h5>
+          <p style="margin-top: -10px;">🟣 {{item.detalle_tipo}}</p>
+          <p style="margin-top: -10px;">📆 {{item.fecha}} 🕒 {{item.hora_inicio}}</p>
+        </ion-text>
+      </ion-item>
+  
+      <ion-item-options>
+        <ion-item-option (click)="atenderCita(item)">Atender</ion-item-option>
+        <!-- <ion-item-option color="danger">Cancelar</ion-item-option> -->
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</section>

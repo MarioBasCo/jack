@@ -1,0 +1,28 @@
+<ng-container>
+  <ion-list [formGroup]="cita">
+    <ion-item>
+      <ion-select label="Dentista" label-placement="floating" formControlName="dentista_id" *ngFor="let doc of doctores"
+      (ionChange)="seleccionarDoctor(cita.get('dentista_id')?.value)">
+        <ion-select-option [value]="doc.id_dentista">{{doc.nombres}} {{doc.apellidos}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Fecha y Hora" interface="action-sheet" label-placement="floating" formControlName="horario_id">
+        <ion-select-option [value]="doc.id_horario" *ngFor="let doc of horasDisponibles">📆 {{doc.fecha}}  &nbsp; &nbsp; 🕒 {{doc.hora_inicio}} - {{doc.hora_fin}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label>Servicios:</ion-label>
+    </ion-item>
+    <ion-radio-group formControlName="tipo_cita_id">
+      <ion-item  *ngFor="let rad of servicios">
+        <ion-radio color="principal" [value]="rad.id_tipo" justify="space-between">{{rad.detalle_tipo}}</ion-radio><br />
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <div class="ion-margin-top ion-text-end">
+    <ion-button type="button" color="principal" (click)="guardarReserva()" [disabled]="cita.invalid">Reservar</ion-button>
+  </div>
+</ng-container>

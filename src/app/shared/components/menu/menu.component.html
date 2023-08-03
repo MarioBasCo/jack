@@ -1,0 +1,46 @@
+<ion-menu content-id="main-content" menuId="first-menu" side="end" swipeGesture="false">
+  <ion-header class="ion-no-border">
+    <ion-toolbar color="transparent">
+      <div style="display: flex; padding-top: .8em; padding-bottom: .8em;">
+        <img width="75" src="assets/icon/jackd-logo.png" alt="">
+        <ion-title><span>JACK DENTAL</span><br><small>Menú de Opciones</small></ion-title>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-card routerLink="/profile">
+      <ion-card-content class="ion-no-padding">
+        <div style="display: flex; gap: 10px; align-items: center; padding: 6px;">
+          <ion-thumbnail>
+            <img style="padding: 6px;" src="assets/icon/perfil.png" alt="Mi Perfil">
+          </ion-thumbnail>
+          <div>
+            <ion-text style="font-size: 1.33em;" color="secundario">Mi Perfil</ion-text>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="ion-margin-vertical" routerLink="/appointments" *ngIf="rol_id == 2">
+      <ion-card-content class="ion-no-padding">
+        <div style="display: flex; gap: 10px; align-items: center; padding: 6px;">
+          <ion-thumbnail>
+            <img style="padding: 6px;" src="assets/icon/calendario.png" alt="Mis Citas">
+          </ion-thumbnail>
+          <div>
+            <ion-text style="font-size: 1.33em;" color="secundario">Citas</ion-text>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+
+  <ion-footer class="ion-no-border">
+    <ion-toolbar color="transparent">
+      <ion-button (click)="cerrarSesion()" color="principal" expand="block" class="ion-margin-horizontal">
+        <ion-icon name="exit" slot="start"></ion-icon>
+        Cerrar Sesión
+      </ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>
